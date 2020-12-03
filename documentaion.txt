@@ -1,0 +1,77 @@
+
+A Shipment has a source port and destination port and in between these two ports,
+  each Shipment will pass through several intermediate ports. A Shipment will carry
+  the details of an estimated date to reach the destination port from the source port .
+  The estimated date is also carried forward between each intermediate ports, where
+  the estimated date on the Shipment will denote the date to reach that intermediate port.
+
+Get the details of a Shipment with the expected date of delivery.
+  Also get the number of shipment status available for that shipment,
+  meaning the number of intermediate traversals. Write a program to
+  compare if the expected date on the final status of the shipment
+  and the actual expected date of the Shipment and display whether
+  the Shipment has arrived 'on time' or 'before' or 'after' the expected date.
+
+This problem has a One to Many relationship between the Shipment and Shipment
+  Status as 'one shipment can have many statuses'.
+
+Problem Specifications:
+[Note : Strictly adhere to the object oriented specifications given as part of the
+  problem statement. Use the same class names and member variable names.]
+
+1. Create a class called Shipment with the following private member variables
+
+String id
+String sourcePort
+String destinationPort
+Date expectedDeliveryDate
+String customerName
+ShipmentStatus[] shipmentStatus
+Create default constructor and five argument constructor with following attributes id,
+ sourcePort, destinationPort, expectedDeliveryDate, customerName
+Create appropriate Constructors.
+
+2. Create a class ShipmentStatus with the following private member variables
+
+String arrivalPort
+String departurePort
+Date arrivedDate
+String status
+Shipment shipment
+Create a default constructor and five argument constructor with following order arrivalPort,
+ departurePort, arrivedDate, status, shipment
+Create appropriate Constructors.
+
+3. Create a class named ShipmentBO with the following public methods.
+
+S.NO	Method Name	                                        |  Method Description
+1	public void displayStatusOfShipment(Shipment shipment)	|  This method is used to find whether the shipment will arrive on time or before expected or after expected
+
+4. Create a driver class named Main which creates an instance of the above mentioned classes.
+
+Input Format :
+Get the Shipment details in the following order order id, source port,
+ destination port,
+ expected date, customer name
+Get the Shipment details in the following order source port,
+ destination port, arrival date
+ and status.
+
+[All text in bold are input and the remaining are output]
+Sample Input and Output 1:
+Enter the shipment details :
+STAJU01,Hong Kong,Cochin,20-05-2017,karthick
+Enter the number of shipment status :
+3
+Enter the shipment status 1 details :
+Hong Kong,Kolkata,17-05-2017,arrived
+Enter the shipment status 2 details :
+Kolkata,Mumbai,18-05-2017,arrived
+Enter the shipment status 3 details :
+Mumbai,Cochin,19-05-2017,arrived
+The shipment arrived before the expected date
+
+--------
+
+Thanks in advance
+
